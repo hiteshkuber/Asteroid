@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public float turnSpeed = 1f;
     private Rigidbody2D _rigidBody;
     private bool _thursting;
+    private bool _reverse;
     private float _turnDirection;
     public Bullet bulletPrefab;
 
@@ -22,6 +23,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         _thursting = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
+        _reverse = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
 
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
@@ -36,7 +38,7 @@ public class Player : MonoBehaviour
             _turnDirection = 0f;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
         { 
             Shoot();
         }
@@ -52,6 +54,11 @@ public class Player : MonoBehaviour
         if (_thursting)
         {
             _rigidBody.AddForce(this.transform.up * this.thrustSpeed);
+        }
+
+        if (_reverse)
+        {
+            _rigidBody.AddForce(this.transform.up * (-this.thrustSpeed));
         }
 
         if (_turnDirection != 0f) 

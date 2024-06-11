@@ -122,6 +122,55 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &214651191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 214651193}
+  - component: {fileID: 214651192}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &214651192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214651191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3537c47136adbd24196e9f5f1228c119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidPrefab: {fileID: -7290268950466138024, guid: f44ed1a105164d142aa05d65ef8822ac, type: 3}
+  spawnRate: 2
+  trajectoryVariance: 15
+  spawnDistance: 15
+  spawnAmount: 1
+--- !u!4 &214651193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214651191}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.3984842, y: 0.9783954, z: 0.03128946}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +273,7 @@ GameObject:
   m_Component:
   - component: {fileID: 956034531}
   - component: {fileID: 956034530}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Boundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1766756546}
   - component: {fileID: 1766756545}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Boundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -552,7 +601,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1959974742}
   - component: {fileID: 1959974741}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Boundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -629,7 +678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2128419005}
   - component: {fileID: 2128419004}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Boundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -706,3 +755,4 @@ SceneRoots:
   - {fileID: 956034531}
   - {fileID: 1959974742}
   - {fileID: 1668735453}
+  - {fileID: 214651193}

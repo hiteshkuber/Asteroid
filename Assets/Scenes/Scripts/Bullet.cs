@@ -20,6 +20,7 @@ public class Bullet : MonoBehaviour
         
     }
 
+    // Logic for projecting bullets
     public void Project(Vector2 direction)
     {
         _rigidbody.AddForce(direction * this.speed);
